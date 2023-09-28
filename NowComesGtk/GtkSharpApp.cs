@@ -46,6 +46,15 @@ public class GtkSharpApp : Window
 
         #endregion Menubar Settings :P // Design and functionality
 
+        // Pokémons button:
+        Button btnPokemonsWater = new Button();
+        Image ImagePokemonsWater = new Image("Images/pokemon_water/WaterIcon.png");
+        btnPokemonsWater.Image = ImagePokemonsWater;
+        btnPokemonsWater.SetSizeRequest(150, 175);
+        btnPokemonsWater.Relief = ReliefStyle.None;
+        fix.Put(btnPokemonsWater, 250, 50);
+        btnPokemonsWater.Clicked += PageWaterTypePokemon;//
+
         mb.Append(pokemonsMI);
         pokemonsMI.Submenu = pokemonsMenu;
         pokemonsMenu.Append(waterMI);
