@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dell\\Source\\Repos\\PokeTrainer\\NowComesGtk\\NowComesGtk.csproj": {}
+    "C:\\Users\\Dell\\source\\repos\\PokeTrainer\\NowComesGtk\\NowComesGtk.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dell\\Source\\Repos\\PokeTrainer\\NowComesGtk\\NowComesGtk.csproj": {
+    "C:\\Users\\Dell\\source\\repos\\PokeTrainer\\NowComesGtk\\NowComesGtk.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dell\\Source\\Repos\\PokeTrainer\\NowComesGtk\\NowComesGtk.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\PokeTrainer\\NowComesGtk\\NowComesGtk.csproj",
         "projectName": "NowComesGtk",
-        "projectPath": "C:\\Users\\Dell\\Source\\Repos\\PokeTrainer\\NowComesGtk\\NowComesGtk.csproj",
+        "projectPath": "C:\\Users\\Dell\\source\\repos\\PokeTrainer\\NowComesGtk\\NowComesGtk.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dell\\Source\\Repos\\PokeTrainer\\NowComesGtk\\obj\\",
+        "outputPath": "C:\\Users\\Dell\\source\\repos\\PokeTrainer\\NowComesGtk\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
