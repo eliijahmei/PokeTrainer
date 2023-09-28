@@ -55,6 +55,7 @@ class GtkSharpApp : Window
         ShowAll();
     }
 
+    //Kaua você é gay
     #region Water type screens
 
     void WaterTypePokemonHomepage(object sender, EventArgs e)
