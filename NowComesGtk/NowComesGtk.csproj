@@ -8,12 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="GtkSharp" Version="3.24.24.95" />
+    <Compile Remove="Back\**" />
+    <Compile Remove="Front\**" />
+    <EmbeddedResource Remove="Back\**" />
+    <EmbeddedResource Remove="Front\**" />
+    <None Remove="Back\**" />
+    <None Remove="Front\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Front\" />
-    <Folder Include="Back\" />
+    <PackageReference Include="GtkSharp" Version="3.24.24.95" />
   </ItemGroup>
 
 </Project>
