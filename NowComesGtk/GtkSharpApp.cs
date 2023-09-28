@@ -28,7 +28,7 @@ class GtkSharpApp : Window
         vbMb.PackStart(mb, false, false, 0);
 
         Menu pokemonsMenu = new Menu();
-        MenuItem pokemonsMI = new MenuItem("Pokémons");   
+        MenuItem pokemonsMI = new MenuItem("Pokémons");
 
         // Water MenuItem:
         MenuItem waterMI = new MenuItem();
@@ -55,7 +55,6 @@ class GtkSharpApp : Window
         ShowAll();
     }
 
-    //Kaua você é gay
     #region Water type screens
 
     void WaterTypePokemonHomepage(object sender, EventArgs e)
@@ -73,7 +72,7 @@ class GtkSharpApp : Window
 
         // Pokémons button:
         Button btnPokemonsWater = new Button();
-        Image ImagePokemonsWater = new Image("Images/pokemon_water/WaterIcon.png");
+        Image ImagePokemonsWater = new Image("Images/pokemon_water/btn_pokemons.png");
         btnPokemonsWater.Image = ImagePokemonsWater;
         btnPokemonsWater.SetSizeRequest(150, 175);
         btnPokemonsWater.Relief = ReliefStyle.None;
@@ -99,9 +98,9 @@ class GtkSharpApp : Window
         btnTrainersWater.Clicked += PageWaterTrainersPokemon;
 
         win.Add(fix);
-        win.ShowAll() ;
+        win.ShowAll();
     }
-    void PageWaterTypePokemon (object sender, EventArgs e)
+    void PageWaterTypePokemon(object sender, EventArgs e)
     {
         Window win = new Window("PokéWiki // Pokémons tipo - Água");
         Fixed fix = new Fixed();
