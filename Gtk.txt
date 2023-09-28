@@ -1,0 +1,154 @@
+===============================================================================================
+====================================  Apenas criando uma janela Gtk# ==================================== 
+===============================================================================================
+
+using Gtk;
+
+class GtkSharpApp : Window 
+{ 
+    public GtkSharpApp() : base("Criando uma janela")
+    {
+        SetDefaultSize(250, 200); // Configura o tamanho padrão da janela para 250x200 pixels.
+
+        SetPosition(WindowPosition.Center); // Define a posição da janela para o centro da tela.
+     
+        DeleteEvent += delegate  // Aqui o "DeleteEvent" tem o evento de fechar tudo quando o fechar janela for selecionado.
+        { 
+		Application.Quit(); 
+	}; 
+
+        Show(); // Exibe a janela
+    }
+    public static void Main()
+    {
+        Application.Init(); // Inicializa a biblioteca GTK#
+    
+        new GtkSharpApp(); // Aqui ele faz a janela que você personalizou existir.       
+    
+        Application.Run(); // Por aqui ele faz a aplicação rodar.
+    }
+}
+
+===============================================================================================
+================================== Atribuir um icone para uma janela Gtk# ==================================
+===============================================================================================
+
+using Gtk;
+ 
+class GtkSharpApp : Window
+{
+    public GtkSharpApp() : base("Colocando um icone na janela")
+    {
+        SetDefaultSize(250, 160); // Configura o tamanho padrão da janela para 250x160 pixels.
+   
+        SetPosition(WindowPosition.Center); // Define a posição da janela para o centro da tela.
+
+        SetIconFromFile("web.png"); // Define um ícone personalizado para a janela a partir de um arquivo chamado "web.png".
+        
+         DeleteEvent += new DeleteEventHandler(OnDelete) // Aqui ele cahama a função que fecha o aplicativo.
+
+        Show(); // Exibe a janela.
+    }
+    public static void Main()
+    {
+        Application.Init(); // Inicializa a biblioteca GTK#
+
+        new GtkSharpApp(); // Aqui ele faz a janela que você personalizou existir.   
+
+        Application.Run(); // Por aqui ele faz a aplicação rodar.
+    }
+    void OnDelete(object obj, DeleteEventArgs args) // Função que faz o evento de fechar a janela.
+    {
+        Application.Quit(); // Encerra a aplicação quando o botão de fechar a janela é pressionado.
+    }
+}
+
+===============================================================================================
+================================== Colocando um menu bar Gtk# ========================================
+===============================================================================================
+
+using Gtk;
+
+class GtkSharpApp : Window
+{
+    public GtkSharpApp() : base("Criando um MenuBar")
+    {
+        SetDefaultSize(300, 200); // Configura o tamanho padrão da janela para 300x200 pixels.
+
+        SetPosition(WindowPosition.Center); // Define a posição da janela para o centro da tela.
+
+        DeleteEvent += delegate // Aqui o "DeleteEvent" tem o evento de fechar tudo quando o fechar janela for selecionado.
+        {
+            Application.Quit();
+        };
+      
+        VBox vbox = new VBox(false, 0); // Cria um VBox (um container vertical) para organizar os elementos na janela.
+    
+        MenuBar menubar = new MenuBar();   // Cria uma barra de menu (MenuBar) que será adicionada à janela.
+        vbox.PackStart(menubar, false, false, 0);
+	// O primeiro argumento, "false", indica que a barra de menu não deve expandir verticalmente.
+	// O segundo argumento, "false", indica que a barra de menu não deve preencher o espaço disponível horizontalmente.
+	// O terceiro argumento, "0", especifica que a barra de menu não deve alocar espaço adicional.
+       
+        //File:
+        Menu fileMenu = new Menu(); // Cria um menu (Menu) chamado "File" e um item de menu (MenuItem) correspondente.
+	MenuItem fileMi = new MenuItem("File"); // Cria um item de menu com o rótulo "File".
+	fileMi.Submenu = fileMenu; // Associa o menu "fileMenu" como submenu do item de menu "fileMi".
+	menubar.Append(fileMi); // Adiciona o item de menu "fileMi" à barra de menu (menubar).
+
+ 	//Quit:
+        MenuItem quitMi = new MenuItem("Quit"); // Cria um item de menu chamado "Quit" e o adiciona ao menu "File".
+        fileMenu.Append(quitMi);
+        quitMi.Activated += delegate// Adiciona um manipulador de evento para o item de menu "Quit" para fechar a aplicação quando selecionado.
+        {
+            Application.Quit();
+        };
+
+        Add(vbox); // Adiciona o VBox na janela.
+        ShowAll();  // Exibe todos os elementos na janela.
+    }
+    public static void Main()
+    { 
+        Application.Init();// Inicializa a biblioteca GTK#.       
+        new GtkSharpApp(); // Cria uma instância da classe GtkSharpApp, que cria a janela com o MenuBar.        
+        Application.Run();// Inicia o loop principal da aplicação GTK# para gerenciar eventos e interações do usuário.
+    }
+}
+
+===============================================================================================
+================================== Colocando um menu bar Gtk# ========================================
+===============================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
