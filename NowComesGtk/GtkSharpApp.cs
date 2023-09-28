@@ -1,7 +1,7 @@
-﻿using Window = Gtk.Window;
-using Gtk;
+﻿using Gtk;
+using Window = Gtk.Window;
 
-class GtkSharpApp : Window
+public class GtkSharpApp : Window
 {
     public GtkSharpApp() : base("PokéWiki")
     {
@@ -28,7 +28,7 @@ class GtkSharpApp : Window
         vbMb.PackStart(mb, false, false, 0);
 
         Menu pokemonsMenu = new Menu();
-        MenuItem pokemonsMI = new MenuItem("Pokémons");   
+        MenuItem pokemonsMI = new MenuItem("Pokémons");
 
         // Water MenuItem:
         MenuItem waterMI = new MenuItem();
@@ -44,7 +44,7 @@ class GtkSharpApp : Window
         waterMI.Child = waterEventBox;
         waterMI.Activated += WaterTypePokemonHomepage;
 
-        #endregion
+        #endregion Menubar Settings :P // Design and functionality
 
         mb.Append(pokemonsMI);
         pokemonsMI.Submenu = pokemonsMenu;
@@ -56,9 +56,10 @@ class GtkSharpApp : Window
     }
 
     //Kaua você é gay
+
     #region Water type screens
 
-    void WaterTypePokemonHomepage(object sender, EventArgs e)
+    private void WaterTypePokemonHomepage(object sender, EventArgs e)
     {
         Window win = new Window("PokéWiki // Pokémons tipo - Água");
         Fixed fix = new Fixed();
@@ -99,29 +100,10 @@ class GtkSharpApp : Window
         btnTrainersWater.Clicked += PageWaterTrainersPokemon;
 
         win.Add(fix);
-        win.ShowAll() ;
+        win.ShowAll();
     }
-    void PageWaterTypePokemon (object sender, EventArgs e)
-    {
-        Window win = new Window("PokéWiki // Pokémons tipo - Água");
-        Fixed fix = new Fixed();
 
-        win.SetDefaultSize(200, 600);
-        win.SetPosition(WindowPosition.Center);
-        win.Resizable = false;
-        win.SetIconFromFile("Images/AppIcon - Pokémon.png");
-    }
-    void PageWaterItemsPokemon(object sender, EventArgs e)
-    {
-        Window win = new Window("PokéWiki // Pokémons tipo - Água");
-        Fixed fix = new Fixed();
-
-        win.SetDefaultSize(200, 600);
-        win.SetPosition(WindowPosition.Center);
-        win.Resizable = false;
-        win.SetIconFromFile("Images/AppIcon - Pokémon.png");
-    }
-    void PageWaterTrainersPokemon(object sender, EventArgs e)
+    private void PageWaterTypePokemon(object sender, EventArgs e)
     {
         Window win = new Window("PokéWiki // Pokémons tipo - Água");
         Fixed fix = new Fixed();
@@ -132,7 +114,29 @@ class GtkSharpApp : Window
         win.SetIconFromFile("Images/AppIcon - Pokémon.png");
     }
 
-    #endregion
+    private void PageWaterItemsPokemon(object sender, EventArgs e)
+    {
+        Window win = new Window("PokéWiki // Pokémons tipo - Água");
+        Fixed fix = new Fixed();
+
+        win.SetDefaultSize(200, 600);
+        win.SetPosition(WindowPosition.Center);
+        win.Resizable = false;
+        win.SetIconFromFile("Images/AppIcon - Pokémon.png");
+    }
+
+    private void PageWaterTrainersPokemon(object sender, EventArgs e)
+    {
+        Window win = new Window("PokéWiki // Pokémons tipo - Água");
+        Fixed fix = new Fixed();
+
+        win.SetDefaultSize(200, 600);
+        win.SetPosition(WindowPosition.Center);
+        win.Resizable = false;
+        win.SetIconFromFile("Images/AppIcon - Pokémon.png");
+    }
+
+    #endregion Water type screens
 
     public static void Main()
     {
