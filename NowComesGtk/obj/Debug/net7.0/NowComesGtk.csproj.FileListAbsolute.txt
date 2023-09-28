@@ -44,3 +44,11 @@ C:\Users\Dell\Source\Repos\PokeTrainer\NowComesGtk\obj\Debug\net7.0\refint\NowCo
 C:\Users\Dell\Source\Repos\PokeTrainer\NowComesGtk\obj\Debug\net7.0\NowComesGtk.pdb
 C:\Users\Dell\Source\Repos\PokeTrainer\NowComesGtk\obj\Debug\net7.0\NowComesGtk.genruntimeconfig.cache
 C:\Users\Dell\Source\Repos\PokeTrainer\NowComesGtk\obj\Debug\net7.0\ref\NowComesGtk.dll
+C:\Users\Dell\Source\Repos\PokeTrainer\NowComesGtk\bin\Debug\net7.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Dell\Source\Repos\PokeTrainer\NowComesGtk\bin\Debug\net7.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Dell\Source\Repos\PokeTrainer\NowComesGtk\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Dell\Source\Repos\PokeTrainer\NowComesGtk\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Dell\Source\Repos\PokeTrainer\NowComesGtk\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\Dell\Source\Repos\PokeTrainer\NowComesGtk\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Dell\Source\Repos\PokeTrainer\NowComesGtk\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Dell\Source\Repos\PokeTrainer\NowComesGtk\bin\Debug\net7.0\PokeApiNet.dll
