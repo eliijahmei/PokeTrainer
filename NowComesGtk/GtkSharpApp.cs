@@ -114,7 +114,7 @@ public class GtkSharpApp : Window
 
     private void PageWaterPokemon(object sender, EventArgs e)
     {
-        Window win = new Window("PokéWiki© // Pokémons tipo - Água");
+        Window win = new Window("PokéTrainer© // Pokémons tipo - Água");
         Fixed fix = new Fixed();
 
         Image pokemonsHomescreen = new Image("Images/pokemon_water/pokemon_water_homescreen.png");
@@ -214,10 +214,10 @@ public class GtkSharpApp : Window
                 var typeSelected = (string)typeList.GetValue(searchByType, 0);
                 if (typeSelected == "Puro tipo Água")
                 {
-                    Image ImageAlomola = new Image("Images/pokemon_water/pure_pokemon/Alomola.png");
+                    Image ImageAlomola = new Image("Images/pokemon_water/pure_pokemon/0007_squirtle.png");
                     btnPokemon1.Image = ImageAlomola;
                     btnPokemon1.Clicked -= WaterPokemonHomepage;
-                    btnPokemon1.Clicked += AlomolaScreen;
+                    btnPokemon1.Clicked += SquirtleScreen;
                 }
                 else
                 {
@@ -259,9 +259,9 @@ public class GtkSharpApp : Window
     
     #region Pokémons
 
-    private void AlomolaScreen (object sender, EventArgs e)
+    private void SquirtleScreen (object sender, EventArgs e)
     {
-        Window win = new Window("Deu certo");
+        Window win = new Window("\"PokéTrainer© // Pokémons tipo - Água // Squirtle - #0007");
         Fixed fix = new Fixed();
 
         win.SetDefaultSize(300, 300);
@@ -271,19 +271,6 @@ public class GtkSharpApp : Window
         win.Add(fix) ;
         win.ShowAll ();
 
-    }
-
-    #endregion
-    
-    #region Functions buttons types
-
-    private void  PureType(object sender, EventArgs e)
-    {
-        Button btnAlomola = new Button();
-        Image ImageAlomola = new Image("Images/pokemon_water/pure_pokemon/alomola_miniImage.png");
-        btnAlomola.Image = ImageAlomola;
-        btnAlomola.SetSizeRequest(50, 50);
-        btnAlomola.Relief = ReliefStyle.None;
     }
 
     #endregion
